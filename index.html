@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+<head>
+<title>整合版臺灣地區縣市行政區震度顯示系統</title>
+<meta charset="UTF-8" />
+<style type="text/css">
+	body {
+		overflow: scroll;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		transform: scale(0.6) translate(-500px, -1200px);
+	}
+	iframe {
+		overflow: hidden;
+		pointer-events: none;
+		border: 0px #FFF none;
+		height: 670px;
+		width : 700px;
+	}
+</style>
+</head>
+
+<body bgcolor="#F7F3F7">
+	<h1 align=middle>臺灣地區縣市行政區震度顯示系統 - 整合版</h1>
+	<h2 align=middle>資料來源：中央氣象局　整合：地牛記錄小組</h2>
+	<div id="times" align=middle></div>
+	<script type="text/javascript">
+			function getDate(){
+				var date = new Date();
+				var date1 = date.toLocaleString();
+				var div1 = document.getElementById("times");
+				div1.innerHTML = date1;
+			}
+		setInterval("getDate()",1000);
+	</script>
+
+	<!--第一行 北新桃中-->
+	<table border="1">
+	<tr>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Taipei"    ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=NEW_Taipei"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Taoyuan"   ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Taichung"  ></iframe></td>
+	</tr>
+	<!--第二行 南高基新-->
+	<tr>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Tainan"   ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Kaohsiung"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Keelung"  ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Hsinchu"  ></iframe></td>
+	</tr>
+	<!--第三行 嘉竹苗彰-->
+	<tr>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Chiayi"        ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Hsinchu_County"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Miaoli"        ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Changhua"      ></iframe></td>
+	</tr>
+	<!--第四行 投雲義屏-->
+	<tr>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Nantou"       ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Yunlin"       ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Chiayi_County"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Pingtung"     ></iframe></td>
+	</tr>
+	<!--第四行 宜花東澎-->
+	<tr>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Yilan"  ></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Hualien"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Taitung"></iframe></td>
+		<td><iframe scrolling="no" src="http://intensity.cwb.gov.tw/realtime/realtime-city-c.php?city=Penghu" ></iframe></td>
+	</tr>
+	</table>
+</body>
+</html>
